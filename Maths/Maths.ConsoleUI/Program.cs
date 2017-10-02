@@ -14,12 +14,9 @@ namespace Maths.ConsoleUI
             var f1 = new Fraction(2, 4);
             var f2 = new Fraction(1, 2);
             var f3 = new Fraction(5, 3);
-            Console.WriteLine(f1 == f2);
-            Console.WriteLine(f1 == f3);
-            Console.WriteLine(f2 == f3);
-            Console.WriteLine(f1 != f2);
-            Console.WriteLine(f1 != f3);
-            Console.WriteLine(f2 != f3);
+            Console.WriteLine(f1 - f2);
+            Console.WriteLine(f2 - f1);
+            Console.WriteLine(f1 - 1);
             Console.ReadKey();
         }
     }
