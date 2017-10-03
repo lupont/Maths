@@ -1,9 +1,7 @@
-﻿using Maths.Core;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Maths.Core;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Maths.ConsoleUI
 {
@@ -11,12 +9,21 @@ namespace Maths.ConsoleUI
     {
         static void Main(string[] args)
         {
-            var f1 = new Fraction(2, 4);
-            var f2 = new Fraction(1, 2);
-            var f3 = new Fraction(5, 3);
-            Console.WriteLine(f1 - f2);
-            Console.WriteLine(f2 - f1);
-            Console.WriteLine(f1 - 1);
+            try
+            {
+                Console.Write("Skriv in en täljare: ");
+                int numerator = int.Parse(Console.ReadLine());
+                Console.Write("Skriv in en nämnare: ");
+                int denominator = int.Parse(Console.ReadLine());
+                var fraction = new Fraction(numerator, denominator);
+                Console.WriteLine(fraction);
+                Main(null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error ocurred: {ex.Message}");
+                Main(null);
+            }
             Console.ReadKey();
         }
     }

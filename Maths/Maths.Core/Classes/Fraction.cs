@@ -74,7 +74,7 @@ namespace Maths.Core
         #region Public overrides
         public override bool Equals(object obj)
         {
-            if (!(obj is Fraction fraction))
+            if (!(obj is Fraction fraction)) // TODO
                 return false;
             return _numerator == fraction.Numerator && _denominator == fraction.Denominator;
         }
